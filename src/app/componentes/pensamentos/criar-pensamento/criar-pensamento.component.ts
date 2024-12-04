@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -14,7 +15,9 @@ export class CriarPensamentoComponent implements OnInit {
     modelo: 'modelo1'
   }
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -24,7 +27,7 @@ export class CriarPensamentoComponent implements OnInit {
   }
 
   cancelarPensamento() {
-    alert("cancelando pensamento");
+    this.router.navigate(['/listarPensamento']);
   }
 
 }
