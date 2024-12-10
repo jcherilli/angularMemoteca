@@ -1,0 +1,13 @@
+<div class="pensamento {{pensamento.modelo}} ff-roboto-mono" [ngClass]="larguraCard()">
+  <img src="../../../../assets/imagens/{{ pensamento.modelo }}.png" alt="modelo3">
+  <p class="conteudo">{{ pensamento.conteudo }}</p>
+  <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
+  <div class="acoes">
+    <button type="button" class="botao-editar" title="botao editar">
+      <img src="../../../../assets/imagens/icone-editar.png" alt="">
+    </button>
+    <button class="botao-excluir" type="button" title="botao excluir">
+      <img src="../../../../assets/imagens/icone-excluir.png" alt="">
+    </button>
+  </div>
+</div>
