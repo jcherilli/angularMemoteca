@@ -14,11 +14,27 @@ export class PensamentoService {
     private httpClient: HttpClient
   ) { }
 
-  public listar(): Observable<Pensamento[]> {
+  public listar() {
     return this.httpClient.get<Pensamento[]>(this.api);
   }
 
   criar(pensamento: Pensamento) {
     return this.httpClient.post(this.api, pensamento);
+  }
+
+  editar(pensamento: Pensamento) {
+    const url = `${this.api}/${pensamento.id}`;
+    return this.httpClient.put<Pensamento>(url, pensamento);
+
+  }
+
+  excluir(id: string) {
+    const url = `${this.api}/${id}`;
+    return this.httpClient.delete<Pensamento>(url);
+  }
+
+  buscarPorId(id: string) {
+    const url = `${this.api}/${id}`;
+    return this.httpClient.get<Pensamento>(url);
   }
 }
