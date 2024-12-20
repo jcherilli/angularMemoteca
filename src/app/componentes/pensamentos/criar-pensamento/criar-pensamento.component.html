@@ -16,7 +16,9 @@
     value={{pensamento.autoria}}-->
     <input type="textarea" class="input" id="autoria" name="autoria" placeholder="Insira autor"
     [(ngModel)]="pensamento.autoria">
+
     <label for="modelo">Selecione o modelo do card:</label>
+
     <div class="container-radio">
       <div class="radio-modelo">
         <label for="modelo1">
@@ -33,6 +35,7 @@
           <p class="autoria"><b>{{pensamento.autoria}}</b></p>
         </div>
       </div>
+
       <div class="radio-modelo">
         <label for="modelo2">
           <input type="radio" id="modelo2" value="modelo2" name="modelo-card">
@@ -48,6 +51,7 @@
           <p class="autoria"><b>{{pensamento.autoria}}</b></p>
         </div>
       </div>
+
       <div class="radio-modelo">
         <label for="modelo3">
           <input type="radio" id="modelo3" value="modelo3" name="modelo-card">
@@ -64,6 +68,7 @@
         </div>
       </div>
     </div>
+
     <div class="acoes">
       <button type="button" (click)="salvarPensamento()" class="botao">salvar</button>
       <button type="button" (click)="cancelarPensamento()" class="botao">cancelar</button>
